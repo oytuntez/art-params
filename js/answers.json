@@ -1,0 +1,28 @@
+[
+  {"options": {
+    "1":        "the story started which is sensual"}, "module": "Generic", "method": "one"},
+  {"options": {
+    "yes": "and sensual is stored at a time\nwhen the night is here",
+    "no": "and sensual is stored at a time\nwhen the night is still not here",
+    "almost": "and sensual is stored at a time\nwhen it is not exactly the night yet",
+    "": "and sensual is stored a time\nwhen, it does not occur to me" }, "module": "Time", "method": "isNight"},
+  {"options": {
+    "yes": "it is cold, yet I can't tell, I stripped my skin off, TBSA zero",
+    "no": "it is warm, yet I can't tell, I stripped my skin off, TBSA zero" }, "module": "Weather", "method": "isCold"},
+  {"options": {
+    "$answer1": null,
+    "$answer2": null,
+    "$answer3": null }, "module": null, "method": null},
+  {"options": {
+    "$answer1": null,
+    "$answer2": null,
+    "$answer3": null }, "module": null, "method": null},
+  {"options": {
+    "$answer1": null,
+    "$answer2": null,
+    "$answer3": null }, "module": null, "method": null},
+  {"options": {
+    "$answer1": null,
+    "$answer2": null,
+    "$answer3": null }, "module": null, "method": null}
+]
