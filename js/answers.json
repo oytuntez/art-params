@@ -10,19 +10,5 @@
     "yes": "it is cold, yet I can't tell, I stripped my skin off, TBSA zero",
     "no": "it is warm, yet I can't tell, I stripped my skin off, TBSA zero" }, "module": "Weather", "method": "isCold"},
   {"options": {
-    "$answer1": null,
-    "$answer2": null,
-    "$answer3": null }, "module": null, "method": null},
-  {"options": {
-    "$answer1": null,
-    "$answer2": null,
-    "$answer3": null }, "module": null, "method": null},
-  {"options": {
-    "$answer1": null,
-    "$answer2": null,
-    "$answer3": null }, "module": null, "method": null},
-  {"options": {
-    "$answer1": null,
-    "$answer2": null,
-    "$answer3": null }, "module": null, "method": null}
+    "": "this is so where I am coming from, where is not {answer} as you" }, "module": "Location", "method": "city"}
 ]

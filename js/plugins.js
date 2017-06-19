@@ -42,7 +42,21 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
+function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+}
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.replace(new RegExp(escapeRegExp(search), 'g'), replacement);
 };
+
+var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+var ARGUMENT_NAMES = /([^\s,]+)/g;
+function getParamNames(func) {
+    var fnStr = func.toString().replace(STRIP_COMMENTS, '');
+    var result = fnStr.slice(fnStr.indexOf('(')+1, fnStr.indexOf(')')).match(ARGUMENT_NAMES);
+    if(result === null)
+        result = [];
+    return result;
+}
