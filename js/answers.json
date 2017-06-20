@@ -7,8 +7,18 @@
     "almost": "and sensual is stored at a time\nwhen it is not exactly the night yet",
     "": "and sensual is stored a time\nwhen, it does not occur to me" }, "module": "Time", "method": "isNight"},
   {"options": {
+    "1": "\n" }, "module": "Generic", "method": "one"},
+  {"options": {
     "yes": "it is cold, yet I can't tell, I stripped my skin off, TBSA zero",
     "no": "it is warm, yet I can't tell, I stripped my skin off, TBSA zero" }, "module": "Weather", "method": "isCold"},
   {"options": {
-    "": "this is so where I am coming from, where is not {answer} as you" }, "module": "Location", "method": "city"}
+    "": "this is so where I am coming from, where is not {answer} as you" }, "module": "Location", "method": "city"},
+  {"options": {
+    "": "it still may be {answer}, but not yours distinctively" }, "module": "Location", "method": "city"},
+  {"options": {
+    "": "I would love it, to extend my arm quadrilaterally" }, "module": "Generic", "method": "one"},
+  {"options": {
+    "": "through your {answer}, CAN I TOUCH YOUR HEART?" }, "module": "Device", "method": "deviceType"},
+  {"options": {
+    "": "itrunvklwmvewfokj I am not that new age, can you buy me?" }, "module": "Generic", "method": "one"}
 ]

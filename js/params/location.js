@@ -47,14 +47,8 @@ define([], function() {
         coords: function() {
             return coords;
         },
-        city: function(line) {
-            var answer = location.address.city;
-
-            if(typeof line === 'string') {
-                return line.replaceAll('{answer}', answer);
-            }
-
-            return answer;
+        city: function() {
+            return location.address.city;
         }
     };
 });

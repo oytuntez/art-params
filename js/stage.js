@@ -1,4 +1,4 @@
-require(['params/ip', 'params/time', 'params/location', 'params/weather', 'params/generic', 'json!answers.json'], function(IP, Time, Location, Weather, Generic, answers) {
+require(['params/ip', 'params/time', 'params/location', 'params/weather', 'params/generic', 'params/device', 'json!answers.json'], function(IP, Time, Location, Weather, Generic, Device, answers) {
     var canvas,
         fontFamily = 'serif',
         poem,
@@ -7,7 +7,8 @@ require(['params/ip', 'params/time', 'params/location', 'params/weather', 'param
             IP: IP,
             Weather: Weather,
             Location: Location,
-            Time: Time
+            Time: Time,
+            Device: Device
         },
         lineModel = {
             module: null,
@@ -70,22 +71,22 @@ require(['params/ip', 'params/time', 'params/location', 'params/weather', 'param
             answerLine = params[line.module][line.method](answerLine);
         }
 
+        console.log(answerLine.indexOf('{answer}'));
+
+        if(answerLine.indexOf('{answer}') > -1) {
+            answerLine = answerLine.replaceAll('{answer}', paramAnswer);
+        }
+
         return answerLine;
     }
 
     function putLine(lineContent) {
         poemLines.push(lineContent);
-        console.log(lineContent);
         updatePoem();
     }
 
     function updatePoem() {
-        console.log(poemLines);
-        console.log(poemLines.join("\n"));
-
         poem.setText(poemLines.join("\n"));
-        console.log(poem);
-        console.log(canvas);
         canvas.renderAll();
     }
 
@@ -102,7 +103,6 @@ require(['params/ip', 'params/time', 'params/location', 'params/weather', 'param
             selection: true
         });
         canvas.setBackgroundColor('white');
-        console.log(canvas);
 
         var textOptions = {
             color: 'black',
@@ -121,7 +121,6 @@ require(['params/ip', 'params/time', 'params/location', 'params/weather', 'param
         poem = new fabric.Text("", textOptions);
 
         canvas.add(poem);
-        console.log(poem);
     }
 
     function init() {
@@ -131,6 +130,7 @@ require(['params/ip', 'params/time', 'params/location', 'params/weather', 'param
             IP.init();
             Location.init();
             Time.init();
+            Device.init();
 
             makeLines();
             start();
